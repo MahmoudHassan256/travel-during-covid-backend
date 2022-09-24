@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 app.use(routes);
 
 connectDb().then(async () => {
-    app.listen(3001, () => console.log("Listening on http://localhost:3001"));
+    app.listen(3001 || process.env.PORT, () => console.log("Listening on http://localhost:3001"));
 });
 
 
