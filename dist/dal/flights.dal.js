@@ -27,11 +27,9 @@ class FlightsDal {
         const updatedFlights = await flights_1.default.find();
         return updatedFlights;
     }
-    findTos(From) {
-        const response = flights_1.default.find({
-            from: From.from,
-        });
-        return response;
+    findTo(From) {
+        const response = flights_1.default.find({ from: From.from });
+        return response.distinct("to");
     }
     findAll() {
         return flights_1.default.find();

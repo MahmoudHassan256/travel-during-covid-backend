@@ -23,7 +23,7 @@ class FlightsService {
     ;
     async getFlightsTos(From) {
         const dal = new flights_dal_1.FlightsDal();
-        const res = await dal.findTos(From);
+        const res = await dal.findTo(From);
         return res;
     }
     ;
